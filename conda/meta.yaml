@@ -1,0 +1,12 @@
+
+package:
+  name: v2trim
+  version: 0.0.1
+
+source:
+  git_url: https://github.com/aglabx/v2trim.git
+
+about:
+  home: https://github.com/aglabx/v2trim
+  license: GPLv2
+  summary: 'Fast trimming of Illumina adapters'
