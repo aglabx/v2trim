@@ -1,6 +1,9 @@
-V2_DIR=$PREFIX/v2trim
-mkdir $V2_DIR
-cp -r $SRC_DIR/* $V2_DIR
+set -e
+
+echo "Building v2trim..."
+
+cp -r $SRC_DIR/* $PREFIX/
+
 cd $PREFIX/bin
-ln -s $V2_DIR/*.exe .
-ln -s $V2_DIR/*.data .
+ln -s  $PREFIX/v2trim.py ./v2trim
+chmod +x ./v2trim
