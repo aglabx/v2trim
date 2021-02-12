@@ -9,6 +9,10 @@ requirements:
   run:
     - python
 
+test:
+  commands:
+    - v2trim -h
+
 about:
   home: https://github.com/aglabx/v2trim
   license: GPLv2
