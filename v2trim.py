@@ -91,7 +91,7 @@ def main():
     
     #Running v2trim
 
-    command = "./V2_trim.exe %s %s %s %s %s %s" % (trim_in_prefix, trim_out_prefix, threads, "0", "fastq", adapters)
+    command = "../data/V2_trim.exe %s %s %s %s %s %s" % (trim_in_prefix, trim_out_prefix, threads, "0", "fastq", adapters)
     check_file = os.path.exists(trim_out_file_1)
     if check_file == True:
         if os.path.getsize(trim_out_file_1) > 0:
@@ -122,7 +122,7 @@ if __name__ == '__main__':
     parser.add_argument('-o','--outdir', help='Ouput folder (default = reads filder)', required=False, default= "")
     parser.add_argument('-p','--prefix', help='Output file prefix (default = prefix of original file)', required=False, default="")
     parser.add_argument('-t','--threads', help='Number of threads (default = 8)', required=False, default="8")
-    parser.add_argument('-a','--adapters', help='File with adapters (default is /path/to/v2trim/data/illumina_ext.data)', required=False, default="./data/illumina_ext.data")
+    parser.add_argument('-a','--adapters', help='File with adapters (default is /path/to/v2trim/data/illumina_ext.data)', required=False, default="../data/illumina_ext.data")
     
     args = vars(parser.parse_args())
     
