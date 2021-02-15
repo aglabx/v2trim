@@ -186,7 +186,7 @@ if __name__ == '__main__':
         if not os.path.exists(output_path):
             os.mkdir(output_path)
 
-    v2trim_dir = "/".join(abspath(getsourcefile(lambda: 0)).split("/")[:-1])
+    v2trim_dir = "/".join(abspath(getsourcefile(lambda: 0)).split("/")[:-2])
     v2trim_exe = v2trim_dir + "/data/V2_trim.exe"
 
     if args["adapters"] == "default":
