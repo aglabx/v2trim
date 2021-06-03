@@ -12,7 +12,7 @@ There is a lot of tools for adapters trimming. Most of them are doing a great jo
 
 ## Installation
 1. From Conda 
-`conda install v2trim`
+`conda install -c bioconda -c conda-forge -c aglab v2trim`
 2. From github
 `git clone https://github.com/aglabx/v2trim.git`
 
