@@ -17,18 +17,19 @@ There is a lot of tools for adapters trimming. Most of them are doing a great jo
 `git clone https://github.com/aglabx/v2trim.git`
 
 ## Usage
-All you need to run v2trim is forward and reverse raw sequence reads. For example you have two files: SRR519926_1.fastq and SRR519926_2.fastq.
+All you need to run v2trim is forward and reverse raw sequence reads. For example you have two files: SRR519926_1.fastq.gz and SRR519926_2.fastq.gz.
 
 To run v2trim enter:
 ```
-./v2trim.exe SRR519926 SRR519926.v2trim 32 0 fastq illumina_ext.data
+v2trim -1 SRR519926_1.fastq.gz -2 SRR519926_2.fastq.gz -o /path/to/outdir -t N -p prefix -u
 ```
-Where:
-* **SRR519926** - prefix of input files, without _1.fastq/_2.fastq (may be with path /home/user/raw_reads/SRR519926).
-* **SRR519926.v2trim** - output prefix, can be written with output path (for example: /home/user/v2trim_test/SRR519926.v2trim_output)
-* **32** - threads 
-* **fastq** - output format (<format: reads|fasta|fastq|fastq_se|fastq_raw>)
-* **illumina_ext.data** - file with all Illumina adapters 
+
+Where arguments:
+* **-1 / -2** - forward and reverse reads
+* **-o** - path to output folder
+* **-t** - number of threads to use
+* **-p** - output prefix
+* **-u** - unzip reades before run (required if your reads are zipped)
 
 ## Citation
 
